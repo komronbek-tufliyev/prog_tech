@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Dasturlash texnologiyalari
+  </title>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/custom.css">
+</head>
+<body>
+  
+<!-- Navbar  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark nav-pills">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="../index.html">Bosh sahifa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end" style="margin-left: auto;">
+          <li class="nav-item px-2">
+            <a class="nav-link link-info" href="./use_data.html">Tekshirish</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link link-light" href="./create_data.html">Training data qo'shish</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="./about.html">Dastur haqida</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="./contact.html">Bog'lanish</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="mt-5">
+    <hr>
+    <h1 class="text-center my-3">{{ Kategoriya }}</h1>
+    <hr>
+        <div class="container row mx-auto m-3">
+            <ul class="list-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
+                <li class="list-group-item active text-center">
+                    Attributni kiriting
+                </li>
+            </ul>
+            <ul class="list-group col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <li class="list-group-item active text-center">
+                    Qiymatni kiriting
+                </li>
+            </ul>
+        </div>
+        <div class="container d-flex justify-content-center">
+            <select name="" id="attr_select" class="form-select my-3 mr-3">
+                <option value="">Salom</option>
+                <option value="">Salom1</option>
+                <option value="">Salom2</option>
+                <option value="">Salom3</option>
+            </select>
+        
+            <select name="" id="value_select" class="form-select m-3">
+                <option value="">Salom</option>
+                <option value="">Salom1</option>
+                <option value="">Salom2</option>
+                <option value="">Salom3</option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button class="btn text-white" onclick="add_options()" style="background-color: #0bad6a;">+ Qo'shish +</button>
+        </div>
+        <hr>
+        <div class="container text-center my-3">
+            <button type="submit" class="btn btn-primary" onclick="show_result()">Natijani chiqar</button>
+        </div>
+        <hr>
+        <div class=""></div>
+        <hr>
+  </main>
+
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+    function add_options() {
+        var select1 = document.getElementById("attr_select");
+        var select2 = document.getElementById("value_select");
+
+        var list1 = document.getElementsByClassName("list-group")[0];
+        var list2 = document.getElementsByClassName("list-group")[1];
+
+        var option1 = select1.options[select1.selectedIndex].text;
+        var option2 = select2.options[select2.selectedIndex].text;
+
+        var li1 = document.createElement("li");
+        var li2 = document.createElement("li");
+
+        li1.className = "list-group-item list-group-item-action";
+        li2.className = "list-group-item list-group-item-action";
+
+        li1.innerHTML = option1;
+        li2.innerHTML = option2;
+
+        list1.appendChild(li1);
+        list2.appendChild(li2);
+    }
+
+    function show_result(){
+        
+    }
+
+</script>
+
+</body>
+</html>

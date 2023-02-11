@@ -1,0 +1,10 @@
+.list-group-item.active{
+    background-color: #0a0e14 !important;
+ border-color: #aed248;
+
+}
+
+main{
+    min-height: 70vh;
+    max-width: 100%;
+}
